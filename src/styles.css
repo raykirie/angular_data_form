@@ -1,1 +1,28 @@
-/* You can add global styles to this file, and also import other style files */
+.users_wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 50px
+}
+
+.user_item{
+    padding: 15px;
+    border: 1px solid black;
+    width: 300px;
+
+    border-radius: 15px;
+}
+
+
+.data_form{
+    margin: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.data_form  input {
+    width: 350px;
+    height: 25px;
+}

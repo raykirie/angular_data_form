@@ -1,0 +1,28 @@
+<div class="data_form">
+    <label>
+        Serach by name
+    </label>
+    <input [(ngModel)]="userService.nameValue"/>
+    <hr>
+    <label>
+        Serach by domen email
+    </label>
+    <select>
+        <option>net</option>
+        <option>org</option>
+        <option>tv</option>
+    </select>
+    <select [(ngModel)]="userService.emailValue">
+        <option value="all">all</option>
+        @for(elem of userService.emails; track $index){
+            <option [value]="elem">{{elem}}</option>
+        }
+    </select>
+    <h2>{{ userService.rangeValue }}</h2>
+    <input type="range" min="1" max="10" step="1" [(ngModel)]="userService.rangeValue"/>
+</div>
+
+<!-- 
+    Реализовать автоматический подбор option для всех возможных доменных зон (почта пользователя)
+    Почта пользователей доступна в массиве this.users. Домены не должны дублироваться в списке select
+ -->
